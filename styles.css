@@ -1,0 +1,1303 @@
+@font-face {
+    font-family: Geramond;
+    src: url(Fonts/static/EBGaramond-Regular.ttf);
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+.main {
+    font-family: Geramond;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: content-box;   
+}
+.container {
+    overflow-x: hidden;
+    width: 100%;
+}
+.cookiebox {
+    margin-top:45%;
+}
+
+/* NAVBAR STYLING */
+
+/* For largest screen size! */
+@media screen and (max-width: 1700px) and (min-width: 1000px) {
+    
+    .navbar {
+        z-index: 4;
+        background-color: transparent;
+        width: 99%;
+        position: fixed;
+        height: 63px;
+        align-items: center;
+        color: white;
+        padding-bottom: 2rem;
+        display: flex;
+        justify-content: space-around;
+        /* flex-direction: row; */
+    }
+
+    a#menu {
+        margin-left: 2rem;
+        color: white;
+        font-size: 20px;    
+        text-decoration: none;
+    }
+
+    img.menu  {
+        position: relative;
+        top: 1rem;
+        height: 50px;
+        background-color: none;
+    }
+    .logoimg {
+        margin-left: 27%;
+        padding-top: 1rem
+    }
+    .logoimg img {
+        
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }
+    .menuright {
+        /* justify-content: space-between; */
+        display: flex;
+        padding-top: 1rem;
+    } 
+    .topOffers{
+        margin-top: 2.5rem;
+    }
+    .topOffers a {
+        color: white;
+        text-decoration: none;
+    }
+    img#giftvoucher {
+        margin-right: 0.5rem;
+        padding-top: 0.5rem;
+        object-fit: cover;
+        width:30px;
+        height: 30px;
+    } 
+
+    .booknow {
+        display: inline-block;
+        margin: 2.5rem 0 1rem 0;
+        margin-left: 1rem;
+        border: 1px solid blue;
+        padding: 1rem 2rem;
+        background-color: blue;
+    }
+    .booknow a {
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: white;
+    }
+    /* Styling the menu */
+
+    .menuBar {
+
+        display: flex;
+        overflow: hidden;
+        width: 99.8%;
+        height: 90vh;
+        position: absolute;
+        background-color: black;
+        right: 100%;
+        top:15%;
+        color: white;
+        transition: .5s ease right;
+    }
+    .menuBar.active {
+        right: 0;
+    }
+    .searchLogo {
+        height: 50px;
+        width: 50px;
+        object-fit: cover;
+    }
+    .search {
+        padding: 3rem 1.5rem;
+        color:azure;
+        background-color: rgb(45, 44, 44);
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+    }
+    .search * {
+        margin-bottom: 0.7rem;
+    }
+
+    input[type= "text"]{
+        width: 80%;
+        height: 1.5rem;
+        z-index: 1;
+    }
+    .searchbar img {
+        right: 10px;
+        z-index: 2;
+        position: absolute;
+        padding-right: 10px;
+        float: right;
+        width: 20px;
+        height: 20px;
+        object-fit: cover;
+    }
+    .search  a {
+        font-size: 1rem;
+        color:azure;
+        text-decoration: none;
+    }
+    .verified{
+        margin-top: 1rem;
+        display: inline-flex;
+    }
+    .verified img {
+        position: relative;
+        top:5px;
+        left: 0;
+        object-fit: cover;
+        width: 30px;
+        height: 26px;
+    }
+    .menugrid{
+        width: 75%;
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr;
+        grid-template-rows: 2;
+    }
+    .menulink{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        margin: auto;
+    }
+    .menulink a{
+        margin-left: 10px;
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+    }
+    .menulink:nth-child(odd){
+        background-color: grey;
+    }
+    .menulink a:hover {
+        color: blue;
+    }
+
+
+    /* End of styling the menu */
+
+    /* Styling the hero background. */
+    .hero {
+        background-image: url("images/khach-s-n-tinh-nhan-venice-1-hotel-FL2cq-GgnWQ-unsplash.jpg");
+        width: 100%;
+        height: 90vh;
+        position: relative;
+        background-size: cover;
+    }
+    .hero::before {
+        pointer-events: none;
+        content:'';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: .2;
+        z-index: 1;
+    }
+    .landing {
+        /* z-index: -2; */
+        color: white;
+        padding-top: 11%;
+        padding-left: 3rem;
+    }
+    .landing h2 {
+        font-size: 3.2em;
+        letter-spacing: 2px;
+
+    }
+    .landing h4 {
+        letter-spacing: 2px;
+        font-size: 1.4em;
+    }
+
+    .extrabtns a{
+        text-decoration: none;
+        color:white;
+        background-color: blue;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 0.7rem 3rem;
+        margin-right: 0.5rem;
+        font-size: 16px;
+        transition: .3s border, background-color;
+    }
+    .extrabtns a:hover {
+        border: 1px solid blue;
+        background-color: transparent;
+    }
+    #scrolldown {
+        margin-bottom: 3rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        color: blue;
+        margin: auto;
+        /* z-index: 1; */
+        padding-top: 7rem;
+        
+    }
+
+    #scrolldown a {
+        border-radius: 30px 150px 40px;
+        font-size: 20px;
+        background-color: white;
+        width: max-content;
+        padding: 1rem 2.5rem;
+        color:blue;
+        text-decoration:none;
+        /* z-index: 2; */
+    }
+    .topOffersTablet{
+        display: none;
+    }
+    /*  This is the welcome part or the about section. */
+
+    .welcome {
+        padding: 1rem;
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 100%;
+    }
+    .welcome h1 {
+        align-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 3rem;
+        font-size: 3rem;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    .welcome p {
+        padding: 0 1.5rem;
+        word-spacing: 3px;
+    }
+
+
+    /* The BREAKAWAY SECTION */
+    .breakaway {
+        padding: 5rem 2rem;
+        margin-top: 3rem;
+        background-color: black;
+        color: white;
+    }
+    .breakaway h2#breaktitle {
+        display: flex;
+        justify-content: center;
+    }
+    h2#breaktitle {
+        letter-spacing: 2px;
+    }
+    .breakawayPics {
+        justify-content: center;
+        padding: 4rem;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 2;
+        row-gap: 2rem;
+    }
+    .breakawayPics img {
+        width: 550px;
+        height: 330px;
+    }
+    .offergrid * {
+        padding: 1rem 1rem;
+    }
+    .offergrid {
+        width: min-content;
+    }
+
+    /* The price element is a custom element that i created myself. */
+    price {
+        color: blue;
+    }
+    .specials {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .specials a {
+        text-decoration: none;
+        color: white;
+        background-color: blue ;
+        padding: 0.7rem 3rem;
+    }
+    .services {
+        padding: 3rem;
+        display: grid;
+        grid-template-columns: auto auto auto ;
+        justify-content: center;
+        grid-template-rows: 2;
+        row-gap: 1.5rem;
+        column-gap: 2rem;
+    }
+    .service {
+        /* position: absolute; */
+        padding: 0 2rem;
+        color: white;
+        width: 350px;
+        height: 450px;
+        background-size: cover;
+        background-position: center;
+    }
+    .service a {
+        text-decoration: none;
+        color: blue;
+    }
+    .servicewrap {
+        height: 150px;
+        padding: 0rem 2rem;
+        letter-spacing: 1.2px;
+        font-family: 'Times New Roman', Times, serif;
+        margin-top: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        background-color: rgba(0, 0, 0, 0.8);
+        box-shadow: 1px 1px 50px black;
+    }
+    .servicewrap * {
+        margin-bottom: 1rem;
+    }
+    .s1 {
+        background-image: url(images/wedding1.jpg);
+    }
+    .s2 {
+        background-image: url(images/pablo-merchan-montes-Orz90t6o0e4-unsplash.jpg);
+    }
+    .s3 {
+        background-image: url(images/resized1_auto_x2.jpg);
+    }
+    .s4 {
+        background-image: url(images/poloclub.jpg);
+    }
+    .s5 {
+        background-image: url(images/leisureclub.jpg);
+    }
+    .s6 {
+        background-image: url(images/family1.jpg);
+    }
+    .serviceimg {
+        width: 100%;
+    
+    }
+    /* END OF SERVICE WRAP STYLE */
+
+    /* ICONS SERVICES */
+    .icons {
+        padding: 4rem 3rem;
+        display: flex;
+        justify-content: center;
+        /* margin:auto; */
+    }
+    .icon {
+        width: 300px;
+        margin-right: 40px;
+        
+    }
+    .icon img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+    #number h2, #number p{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .iconimg {
+        display: flex;
+        justify-content: center;
+    }
+    /* END OF ICON SERVICES  */
+
+    /* BEGINNNING OF VOUCHER STYLES */
+    .voucherdiv {
+        background-image:url(images/voucher.jpg);
+        background-size: cover;
+        margin: 20px 0;
+        width: 100%;
+        height: 560px;
+        outline: 3px solid white;
+        outline-offset: -20px;
+        color: white;
+    }
+    .voucher {
+        font-weight: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 12rem 0 0 100px;
+    }
+    .voucher * {
+        padding-bottom: 2rem;
+    }
+    .voucher p {
+        font-size: 25px;
+    }
+    .buynow a{
+        text-decoration: none;
+        color: white;
+        background-color: blue;
+        padding: 1rem 3rem;
+        font-size: 20px;
+    }
+    /* END OF VOUCHER STYLING */
+
+    /* FIND US SECTION STYLING */
+    .map {
+        margin-top: 4rem;
+        height: 500px;
+        overflow: hidden;
+        display: flex;
+    }
+    .findUs {
+        padding: 10rem 4rem;
+        width: 40%;
+        border-left: 3px solid blue;
+    }
+    .findUs h1 {
+        color: blue;
+    }
+    .findUs p {
+        padding-top: 1.5rem;
+        font-size: 17px;
+    }
+
+    /* MD MESSAGE CONCLUSION STYLING */
+    .conclusion {
+        display: flex;
+        padding: 5rem 12rem;
+    }
+    .textCon {
+        width: 70%;
+    }
+    .textCon p {
+        margin: 2rem 0;
+    }
+    .directorPic img {
+        width: 300px;
+        object-fit: cover;
+        height: 305px;
+    }
+    .directorPic {
+        margin-left: 10rem;
+    }
+
+    /* FOOTER STYLING */
+    .footer1 {
+        background-color: rgb(30, 29, 29);
+        display: flex;
+        justify-content: center;
+        padding: 2rem 0;
+    }
+    .footer1info {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+    .footer1info img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }
+    .footer1info a {
+        /* color: blue; */
+        text-decoration: none;
+        font-size: 25px;
+    }
+    #address {
+        color: rgb(215, 234, 251);
+        margin-bottom: 25px;
+    }
+    .extrainfo{
+        padding-top: 2rem;
+    }
+    .extrainfo a {
+        margin-right: 2.5rem;
+        color: white;
+        font-size: 18px;
+    }
+    .extrainfo a:hover {
+        color: blue;
+    }
+    .footer2 {
+        padding: 2rem 0;
+        background-color: rgb(17, 16, 16);
+        color:white;
+
+    }
+    .socials img{
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    
+    }
+    .socials {
+        display: flex;
+        justify-content: center;
+
+    }
+    .socials a {
+        text-align: center;
+        margin-right: 2rem;
+        font-size: 18px;
+        color:white;
+        text-decoration: none;
+    }
+    .socials a p {
+        font-size: 15px;
+    }
+    .footer3 {
+        padding: 0.5rem 0;
+        font-size: 17px;
+        color: white;
+        display: flex;
+        background-color: black;
+        justify-content: center
+    }
+    .topOffers {
+        display: inline-block;
+    }
+}
+
+/* Media query style for small laptop or tablet*/
+@media screen and (min-width:200px) and (max-width:999px){
+    
+    .navbar {
+        z-index: 4;
+        background-color: transparent;
+        width: 99%;
+        position: fixed;
+        height: 63px;
+        align-items: center;
+        color: white;
+        padding-bottom: 2rem;
+        display: flex;
+        justify-content: space-around;
+        /* flex-direction: row; */
+    }
+
+    a#menu {
+        margin-left: 2rem;
+        color: white;
+        font-size: 20px;    
+        text-decoration: none;
+    }
+
+    img.menu  {
+        position: relative;
+        top: 1rem;
+        height: 50px;
+        background-color: none;
+    }
+    .logoimg img {
+        
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }
+    .menuright {
+        /* justify-content: space-between; */
+        display: flex;
+        padding-top: 1rem;
+    } 
+   
+    img#giftvoucher {
+        margin-right: 0.5rem;
+        padding-top: 0.5rem;
+        object-fit: cover;
+        width:30px;
+        height: 30px;
+    } 
+
+    .booknow {
+        display: inline-block;
+        margin: 2.5rem 0 1rem 0;
+        margin-left: 1rem;
+        border: 1px solid blue;
+        padding: 1rem 2rem;
+        background-color: blue;
+    }
+    .booknow a {
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: white;
+    }
+    /* Styling the menu */
+
+    .menuBar {
+        display: flex;
+        overflow: hidden;
+        width: 99.8%;
+        height: 90vh;
+        position: absolute;
+        background-color: black;
+        right: 100%;
+        top:10%;
+        color: white;
+        transition: .5s ease right;
+    }
+    .menuBar.active {
+        right: 0;
+    }
+    .searchLogo {
+        height: 50px;
+        width: 50px;
+        object-fit: cover;
+    }
+    .search {
+        padding: 3rem 1.5rem;
+        color:azure;
+        background-color: rgb(45, 44, 44);
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+    }
+    .search * {
+        margin-bottom: 0.7rem;
+    }
+
+    input[type= "text"]{
+        width: 80%;
+        height: 1.5rem;
+        z-index: 1;
+    }
+    .searchbar img {
+        right: 10px;
+        z-index: 2;
+        position: absolute;
+        padding-right: 10px;
+        float: right;
+        width: 20px;
+        height: 20px;
+        object-fit: cover;
+    }
+    .search  a {
+        font-size: 1rem;
+        color:azure;
+        text-decoration: none;
+    }
+    .verified{
+        margin-top: 1rem;
+        display: inline-flex;
+    }
+    .verified img {
+        position: relative;
+        top:5px;
+        left: 0;
+        object-fit: cover;
+        width: 30px;
+        height: 26px;
+    }
+    .menugrid{
+        width: 75%;
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr;
+        grid-template-rows: 2;
+    }
+    .menulink{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        margin: auto;
+    }
+    .menulink a{
+        margin-left: 10px;
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+    }
+    .menulink:nth-child(odd){
+        background-color: grey;
+    }
+    .menulink a:hover {
+        color: blue;
+    }
+
+
+    /* End of styling the menu */
+
+    /* Styling the hero background. */
+    .hero {
+        background-image: url("images/khach-s-n-tinh-nhan-venice-1-hotel-FL2cq-GgnWQ-unsplash.jpg");
+        width: 100%;
+        height: 70vh;
+        position: relative;
+        background-size: cover;
+    }
+    .hero::before {
+        pointer-events: none;
+        content:'';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: .2;
+        z-index: 1;
+    }
+    .landing {
+        /* z-index: -2; */
+        color: white;
+        padding-top: 11%;
+        padding-left: 3rem;
+    }
+    .landing h2 {
+        font-size: 2.2em;
+        letter-spacing: 2px;
+
+    }
+    .landing h4 {
+        letter-spacing: 2px;
+        /* font-size: 1.4em; */
+    }
+    .extrabtns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .extrabtns a{
+        margin-top: 1rem;
+        width: max-content;
+        text-decoration: none;
+        color:white;
+        background-color: blue;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 0.7rem 3rem;
+        margin-right: 0.5rem;
+        font-size: 16px;
+        transition: .3s border, background-color;
+    }
+    .extrabtns a:hover {
+        border: 1px solid blue;
+
+        background-color: transparent;
+    }
+    #scrolldown {
+        display: none;
+    }
+
+/*  This is the welcome part or the about section. */
+
+    .welcome {
+        padding: 1rem;
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 100%;
+    }
+    .welcome h1 {
+        align-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 3rem;
+        font-size: 2rem;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    .welcome p {
+        padding: 0 1.5rem;
+        word-spacing: 3px;
+    }
+
+    .breakaway {
+        padding: 5rem 2rem;
+        margin-top: 3rem;
+        background-color: black;
+        color: white;
+    }
+    .breakaway h2#breaktitle {
+        display: flex;
+        justify-content: center;
+    }
+    h2#breaktitle {
+        letter-spacing: 2px;
+    }
+    .breakawayPics {
+        justify-content: center;
+        padding: 0.5rem;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 2;
+        row-gap: 1rem;
+    }
+    .breakawayPics img {
+        width: 370px;
+        height: 230px;
+    }
+    .offergrid * {
+        padding: 1rem 1rem;
+    }
+    .offergrid {
+        width: min-content;
+    }
+    /* The price element is a custom element that i created myself. */
+    price {
+        color: blue;
+    }
+    .specials {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .specials a {
+        text-decoration: none;
+        color: white;
+        background-color: blue ;
+        padding: 0.7rem 3rem;
+    }
+
+    /* BEGINNING OF SERVICES STYLING */
+    .services {
+        padding: 3rem;
+        display: grid;
+        grid-template-columns: auto auto auto ;
+        justify-content: center;
+        grid-template-rows: 2;
+        row-gap: 1.5rem;
+        column-gap: 1rem;
+    }
+    .service {
+        /* position: absolute; */
+        padding: 0 2rem;
+        color: white;
+        width: 230px;
+        height: 310px;
+        background-size: cover;
+        background-position: center;
+    }
+    .service a {
+        text-decoration: none;
+        color: blue;
+    }
+    .servicewrap {
+        height: 170px;
+        padding: 0rem 2rem;
+        letter-spacing: 1.2px;
+        font-family: 'Times New Roman', Times, serif;
+        margin-top: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        background-color: rgba(0, 0, 0, 0.8);
+        box-shadow: 1px 1px 50px black;
+    }
+    .servicewrap * {
+        margin-bottom: 1rem;
+    }
+    .s1 {
+        background-image: url(images/wedding1.jpg);
+    }
+    .s2 {
+        background-image: url(images/pablo-merchan-montes-Orz90t6o0e4-unsplash.jpg);
+    }
+    .s3 {
+        background-image: url(images/resized1_auto_x2.jpg);
+    }
+    .s4 {
+        background-image: url(images/poloclub.jpg);
+    }
+    .s5 {
+        background-image: url(images/leisureclub.jpg);
+    }
+    .s6 {
+        background-image: url(images/family1.jpg);
+    }
+    .serviceimg {
+        width: 100%;
+    
+    }
+    .icons {
+        padding: 4rem 3rem;
+        display: flex;
+        justify-content: center;
+        /* margin:auto; */
+    }
+    .icon {
+        width: 250px;
+        margin-right: 40px; 
+    }
+    .icon img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+    #number h2, #number p{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .iconimg {
+        display: flex;
+        justify-content: center;
+    }
+    /* END OF ICON SERVICES  */
+
+    /* BEGINNNING OF VOUCHER STYLES */
+    .voucherdiv {
+        background-image:url(images/voucher.jpg);
+        background-size: cover;
+        margin: 20px 0;
+        width: 100%;
+        height: 560px;
+        outline: 3px solid white;
+        outline-offset: -20px;
+        color: white;
+    }
+    .voucher {
+        font-weight: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 12rem 0 0 100px;
+    }
+    .voucher * {
+        padding-bottom: 2rem;
+    }
+    .voucher p {
+        font-size: 25px;
+    }
+    .buynow a{
+        text-decoration: none;
+        color: white;
+        background-color: blue;
+        padding: 1rem 3rem;
+        font-size: 20px;
+    }
+    .buynow a:hover{
+        background-color: transparent;
+        border: 1px solid blue;
+    }
+    .map {
+        margin-top: 14rem;
+        height: 500px;
+        /* overflow: hidden; */
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .findUs {
+        margin-top: 2rem;
+        /* padding: 10rem 4rem;
+        width: 40%;
+        border-left: 3px solid blue; */
+    }
+    .findUs hr {
+        width: 10rem;
+    }
+    .findUs h1 {
+        color: blue;
+        text-align: center;
+    }
+    .findUs p {
+        padding-top: 1.5rem;
+        font-size: 17px;
+    }
+    /* MD MESSAGE CONCLUSION STYLING */
+    .conclusion {
+        display: flex;
+        padding: 5rem 2rem;
+        justify-content: space-between;
+    }
+    .textCon {
+        width: 800px;
+    }
+    .textCon p {
+        margin: 2rem 0;
+    }
+    .directorPic img {
+        width: 300px;
+        object-fit: cover;
+        height: 305px;
+    }
+
+    /* FOOTER STYLING */
+    .footer1 {
+        background-color: rgb(30, 29, 29);
+        display: flex;
+        justify-content: center;
+        padding: 2rem 0;
+    }
+    .footer1info {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+    .footer1info img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }
+    .footer1info a {
+        /* color: blue; */
+        text-decoration: none;
+        font-size: 25px;
+    }
+    #address {
+        color: rgb(215, 234, 251);
+        margin-bottom: 25px;
+    }
+    .extrainfo{
+        padding-top: 2rem;
+    }
+    .extrainfo a {
+        margin-right: 2.5rem;
+        color: white;
+        font-size: 18px;
+    }
+    .extrainfo a:hover {
+        color: blue;
+    }
+    .footer2 {
+        padding: 2rem 0;
+        background-color: rgb(17, 16, 16);
+        color:white;
+
+    }
+    .socials img{
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    
+    }
+    .socials {
+        justify-content: center;
+        flex-wrap: wrap;
+        display: flex;
+    }
+    .socials a {
+        text-align: center;
+        margin-left: 2rem;
+        font-size: 18px;
+        color:white;
+        text-decoration: none;
+    }
+    .footer3 {
+        padding: 0.5rem 0;
+        font-size: 17px;
+        color: white;
+        display: flex;
+        background-color: black;
+        justify-content: center
+    }
+
+    .topOffers {
+        display: none;
+    }
+    .topOffers a {
+        position: relative;
+        top:0.9rem;
+
+    }
+    .topOffersTablet {
+        justify-content: space-between;
+        display: flex;
+        margin-top: 10.5%;
+        width: 100vw;
+    }
+    .topOffersTablet a {
+        width: 49%;
+        padding: 0.6rem 0;
+        background-color: blue;
+        color:white;
+        text-align: center;
+        text-decoration: none;
+        /* margin: 0 1rem; */
+    }
+    .topOffersTablet a:hover{
+        border: 1px solid blue;
+        background-color: transparent;
+    }
+}
+
+/* Mobile design */
+
+@media screen and (min-width: 200px) and (max-width:800px){
+    /* .navbar{
+        z-index: 4;
+        background-color: transparent;
+        width: 99%;
+        position: fixed;
+        height: 63px;
+        align-items: center;
+        color: white;
+        padding-bottom: 2rem;
+        display: flex;
+        justify-content: space-around;
+
+    }
+    .cookielayer1 {
+        display: none;
+    }
+    a#menu {
+        margin-left: 2rem;
+        color: white;
+        font-size: 20px;    
+        text-decoration: none;
+    }
+    img.menu  {
+        position: relative;
+        top: 1rem;
+        height: 50px;
+        background-color: none;
+    }
+    .logoimg img {
+        
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }
+    .menuright {
+        /* justify-content: space-between; 
+        display: flex;
+        padding-top: 1rem;
+    } 
+   
+    img#giftvoucher {
+        margin-right: 0.5rem;
+        padding-top: 0.5rem;
+        object-fit: cover;
+        width:30px;
+        height: 30px;
+    }  */
+
+    /*  I did this above because I did not want to keep repeating the styles for all the different media screens. 
+    So it's going to remain the same and I'm going to change the ones that need to be changed.
+    */
+
+    .hero{
+        height: 99vh;
+    }
+    .landing {
+        /* z-index: -2; */
+        color: white;
+        padding-top: 47%;
+        padding-left: 3rem;
+    }
+    .topOffersTablet {
+        margin-top:10rem;
+    }
+    .logoimg {
+        position: relative;
+        top: 5rem;
+    }
+    .welcome {
+        display:block;
+    }
+    .breakaway {
+        padding: 5%;
+    }
+    .breakawayPics {
+        width: 100%;
+        vertical-align: center;
+        align-content: center;
+        margin:auto;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .offergrid {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem auto;
+        justify-content: center;
+    }
+    .offergrid * {
+        padding: 0;
+        margin: 0;
+    }
+    .services{
+        padding: 3rem 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+    .service {
+        margin: auto;
+        padding: 0 0.5rem;
+        color: white;
+        width: 350px;
+        height: 450px;
+        background-size: cover;
+        background-position: center;
+    }
+    .icons  {
+        display: contents;
+        justify-content: center;
+        padding-top: 4rem;
+    }
+    .icon{
+        margin: auto;
+    }
+    /* MD MESSAGE CONCLUSION STYLING */
+    .conclusion {
+        display: contents;
+        padding: 0;
+    }
+    .textCon {
+        width: 100%;
+    }
+    .textCon h3 {
+        font-size: 23px;
+    }
+    .textCon .buynow {
+        margin-bottom: 4rem;
+    }
+    .directorPic img {
+        width: 90%;
+        object-fit: cover;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+    .directorPic {
+        margin-left: 0;
+    }
+
+    /* MENU SECTION */
+    .search {
+        width: 35%
+    }
+
+    .menugrid {
+        display: flex;
+        flex-direction: column;
+    }
+    .map {
+        margin-top: 10rem;
+        padding-top: 10rem;
+    }
+
+    /* mobile voucher design */
+    .voucherdiv {
+        margin-bottom: 5rem;
+    }
+}
