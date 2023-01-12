@@ -10,7 +10,7 @@ document.addEventListener('scroll',()=> {
     } else {
         navbar.style.backgroundColor='transparent'
     }
-    if (scroll_position > 150) {
+    if (scroll_position > 150 || menuBar.classList.contains('.active')) {
         logopic.style.display="none"
     }
     else {
@@ -27,11 +27,9 @@ acceptCookies.onclick = function(){
 
 // To bring the menu bar in!
 menu.addEventListener('click',()=>{
-    if (logopic.style.display="none"){
-        logopic.style.display="block";
-    }
-    else {
 
+    if (logopic.style.display==='none'){
+        logopic.style.display = 'none';
     }
     
     menuBar.classList.toggle('active');

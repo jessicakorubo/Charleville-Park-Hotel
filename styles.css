@@ -21,6 +21,10 @@
     margin-top:45%;
 }
 
+.logoimg img {
+    z-index: -1;
+}
+
 /* NAVBAR STYLING */
 
 /* For largest screen size! */
@@ -611,6 +615,9 @@
         height: 50px;
         background-color: none;
     }
+    .logoimg {
+        z-index: -1;
+    }
     .logoimg img {
         
         width: 50px;
@@ -646,7 +653,11 @@
     }
     /* Styling the menu */
 
+    .menuSection {
+        z-index: 2;
+    }
     .menuBar {
+        z-index: 2;
         display: flex;
         overflow: hidden;
         width: 99.8%;
