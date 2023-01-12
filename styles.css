@@ -1128,7 +1128,7 @@
     .topOffersTablet {
         justify-content: space-between;
         display: flex;
-        margin-top: 10.5%;
+        margin-top: 7.5%;
         width: 100vw;
     }
     .topOffersTablet a {
@@ -1304,6 +1304,7 @@
     }
     .map {
         margin-top: 10rem;
+
         padding-top: 10rem;
     }
 
@@ -1312,3 +1313,5 @@
         margin-bottom: 5rem;
     }
 }
+
+/*  End  of file */
