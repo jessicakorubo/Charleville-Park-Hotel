@@ -4,6 +4,7 @@
 }
 
 * {
+    font-size: small;
     scroll-behavior: smooth;
 }
 
@@ -28,7 +29,7 @@
 /* NAVBAR STYLING */
 
 /* For largest screen size! */
-@media screen and (max-width: 1700px) and (min-width: 1000px) {
+@media screen and (max-width: 3000px) and (min-width: 1000px) {
     
     .navbar {
         z-index: 4;
