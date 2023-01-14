@@ -64,3 +64,23 @@ a#cookieAcceptBtn {
     background-color: white;
     color: black;
 }
+
+
+/* Mobile design */
+ @media screen and (min-width: 200px) and (max-width:800px) {
+    #cookieSettingsBtn {
+        font-size: 14px;
+        border: 1px solid black;
+        padding: 1rem;
+    }
+    .cookiebox {
+        width: 70%;
+        height: 70vh;
+    }
+    #cookieButtons {
+        display: content;
+    }
+    .cookiebox {
+        display: none;
+    }
+ }

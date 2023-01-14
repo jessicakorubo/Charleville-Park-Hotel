@@ -587,7 +587,7 @@
 }
 
 /* Media query style for small laptop or tablet*/
-@media screen and (min-width:200px) and (max-width:999px){
+@media screen and (min-width:140px) and (max-width:999px){
     
     .navbar {
         z-index: 4;
@@ -599,12 +599,12 @@
         color: white;
         padding-bottom: 2rem;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         /* flex-direction: row; */
     }
 
     a#menu {
-        margin-left: 2rem;
+        /* margin-left: 2rem; */
         color: white;
         font-size: 20px;    
         text-decoration: none;
@@ -1149,8 +1149,8 @@
 
 /* Mobile design */
 
-@media screen and (min-width: 200px) and (max-width:800px){
-    /* .navbar{
+@media screen and (min-width: 140px) and (max-width:699px){
+    .navbar{
         z-index: 4;
         background-color: transparent;
         width: 99%;
@@ -1163,9 +1163,7 @@
         justify-content: space-around;
 
     }
-    .cookielayer1 {
-        display: none;
-    }
+    
     a#menu {
         margin-left: 2rem;
         color: white;
@@ -1185,7 +1183,7 @@
         object-fit: cover;
     }
     .menuright {
-        /* justify-content: space-between; 
+        justify-content: space-between; 
         display: flex;
         padding-top: 1rem;
     } 
@@ -1195,12 +1193,93 @@
         padding-top: 0.5rem;
         object-fit: cover;
         width:30px;
-        height: 30px;
-    }  */
+        height: 30px; 
+    } 
+    /* neww... */
+
+    .searchLogo {
+        height: 50px;
+        width: 50px;
+        object-fit: cover;
+    }
+    .search {
+        padding: 3rem 1.5rem;
+        color:azure;
+        background-color: rgb(45, 44, 44);
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+    }
+    .search * {
+        margin-bottom: 0.7rem;
+    }
+
+    input[type= "text"]{
+        width: 80%;
+        height: 1.5rem;
+        z-index: 1;
+    }
+    .searchbar img {
+        right: 10px;
+        z-index: 2;
+        position: absolute;
+        padding-right: 10px;
+        float: right;
+        width: 20px;
+        height: 20px;
+        object-fit: cover;
+    }
+    .search  a {
+        font-size: 1rem;
+        color:azure;
+        text-decoration: none;
+    }
+    .verified{
+        margin-top: 1rem;
+        display: inline-flex;
+    }
+    .verified img {
+        position: relative;
+        top:5px;
+        left: 0;
+        object-fit: cover;
+        width: 30px;
+        height: 26px;
+    }
+    .menugrid{
+        width: 75%;
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr;
+        grid-template-rows: 2;
+    }
+    .menulink{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        margin: auto;
+    }
+    .menulink a{
+        margin-left: 10px;
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+    }
+    .menulink:nth-child(odd){
+        background-color: grey;
+    }
+    .menulink a:hover {
+        color: blue;
+    }
 
     /*  I did this above because I did not want to keep repeating the styles for all the different media screens. 
     So it's going to remain the same and I'm going to change the ones that need to be changed.
     */
+    #menu {
+        font-size: 10px;
+    }
 
     .hero{
         height: 99vh;
@@ -1208,16 +1287,19 @@
     .landing {
         /* z-index: -2; */
         color: white;
-        padding-top: 30%;
+        padding-top: 50%;
         padding-left: 3rem;
     }
     .topOffersTablet {
         margin-top:10rem;
     }
     .logoimg {
-        position: relative;
-        top: 5rem;
+        display: none;
     }
+    /* .logoimg img {
+        width: 30px;
+        height: 30px;
+    } */
     .welcome {
         display:block;
     }
@@ -1315,4 +1397,4 @@
     }
 }
 
-/*  End  of file */
+/*  End  of mobile design */
